@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
 import { Link } from 'react-router-dom'
-import { Button, Row, Col, ListGroup, Image, Card, ListGroupItem } from 'react-bootstrap'
-import { ReactReduxContext, useDispatch, useSelector } from 'react-redux'
+import { Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getOrderDetails, payOrder } from '../actions/orderActions'
-import { ORDER_PAY_REQUEST, ORDER_PAY_RESET } from '../constants/orderConstants'
+import { ORDER_PAY_RESET } from '../constants/orderConstants'
 
 const Order = ({ match }) => {
   const orderId = match.params.id
