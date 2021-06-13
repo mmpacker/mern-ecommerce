@@ -15,6 +15,8 @@ import PlaceOrder from './pages/PlaceOrder'
 import Order from './pages/Order'
 import UserList from './pages/UserList'
 import UserEdit from './pages/UserEdit'
+import ProductList from './pages/ProductList'
+
 
 
 const App = () => {
@@ -32,8 +34,9 @@ const App = () => {
             <Route path='/profile' component={Profile} /> 
             <Route path='/product/:id' component={ProductDetails} />
             <Route path='/cart/:id?' component={Cart} />
-            <Route path='/admin/userList' component={UserList} />
+            <Route path='/admin/userlist' component={UserList} />
             <Route path='/admin/user/:id/edit' component={UserEdit} />
+            <Route path='/admin/productlist' component={ProductList} />
             <Route path='/' component={Home} exact />
           </Container>
         </main>
